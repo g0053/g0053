@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>CloudFlare DDDNS</title>
+    <title>Post II</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -15,30 +15,19 @@
     
     <meta property="og:site_name" content="Belomor">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="CloudFlare DDDNS">
-    <meta property="og:description" content="Shell script makes API call if ip_add is not equal to ip_now:root@gus:~# cat /root/cloud-dns.sh  KLUCH='yr_api_key' ZONA='yr_zone' ip_now=$(dig @1.1.1.1 ddns.belomor.nl | grep ddns.belomor.nl | tail -1 | awk {'print $5'}) ip_add=$(curl -4s">
-    <meta property="og:url" content="http://localhost:2368/cloudflare-ddns/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2018/10/Cloudflare_Logo.png">
-    <meta property="article:published_time" content="2018-10-29T10:44:33.000Z">
-    <meta property="article:modified_time" content="2018-10-29T19:21:57.000Z">
-    <meta property="article:tag" content="cloudflare">
-    <meta property="article:tag" content="ddns">
-    <meta property="article:tag" content="shell">
-    <meta property="article:tag" content="crontab">
-    
+    <meta property="og:title" content="Post II">
+    <meta property="og:description" content="code bin/bash">
+    <meta property="og:url" content="http://localhost:2368/post-ii/">
+    <meta property="article:published_time" content="2018-10-29T15:42:53.000Z">
+    <meta property="article:modified_time" content="2018-10-29T15:42:53.000Z">
     <meta property="article:publisher" content="https://www.facebook.com/facebook">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CloudFlare DDDNS">
-    <meta name="twitter:description" content="Shell script makes API call if ip_add is not equal to ip_now:root@gus:~# cat /root/cloud-dns.sh  KLUCH='yr_api_key' ZONA='yr_zone' ip_now=$(dig @1.1.1.1 ddns.belomor.nl | grep ddns.belomor.nl | tail -1 | awk {'print $5'}) ip_add=$(curl -4s">
-    <meta name="twitter:url" content="http://localhost:2368/cloudflare-ddns/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2018/10/Cloudflare_Logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Post II">
+    <meta name="twitter:description" content="code bin/bash">
+    <meta name="twitter:url" content="http://localhost:2368/post-ii/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="GUS">
-    <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="cloudflare, ddns, shell, crontab">
     <meta name="twitter:site" content="@test">
-    <meta property="og:image:width" content="830">
-    <meta property="og:image:height" content="576">
     
     <script type="application/ld+json">
 {
@@ -60,18 +49,11 @@
         "url": "http://localhost:2368/author/gus/",
         "sameAs": []
     },
-    "headline": "CloudFlare DDDNS",
-    "url": "http://localhost:2368/cloudflare-ddns/",
-    "datePublished": "2018-10-29T10:44:33.000Z",
-    "dateModified": "2018-10-29T19:21:57.000Z",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://localhost:2368/content/images/2018/10/Cloudflare_Logo.png",
-        "width": 830,
-        "height": 576
-    },
-    "keywords": "cloudflare, ddns, shell, crontab",
-    "description": "Shell script makes API call if ip_add is not equal to ip_now:root@gus:~# cat /root/cloud-dns.sh  KLUCH&#x3D;&#x27;yr_api_key&#x27; ZONA&#x3D;&#x27;yr_zone&#x27; ip_now&#x3D;$(dig @1.1.1.1 ddns.belomor.nl | grep ddns.belomor.nl | tail -1 | awk {&#x27;print $5&#x27;}) ip_add&#x3D;$(curl -4s",
+    "headline": "Post II",
+    "url": "http://localhost:2368/post-ii/",
+    "datePublished": "2018-10-29T15:42:53.000Z",
+    "dateModified": "2018-10-29T15:42:53.000Z",
+    "description": "code bin/bash",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -103,37 +85,15 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">CloudFlare DDDNS</h1>
+                <h1 class="post-title">Post II</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/gus/">GUS</a></p>
                     <time class="post-date" datetime="2018-10-29">2018-10-29</time>
                 </section>
             </header>
-            <figure class="post-image">
-                <amp-img src="http://localhost:2368/content/images/2018/10/Cloudflare_Logo.png" width="600" height="400" layout="responsive"></amp-img>
-            </figure>
             <section class="post-content">
 
-                <p>Shell script makes API call if ip_add is not equal to ip_now:</p><pre><code>root@gus:~# cat /root/cloud-dns.sh 
-KLUCH='yr_api_key'
-ZONA='yr_zone'
-ip_now=$(dig @1.1.1.1 ddns.belomor.nl | grep ddns.belomor.nl | tail -1 | awk {'print $5'})
-ip_add=$(curl -4s ipconfig.io)
-milo='1@belomor.nl'
-if [ $ip_add != $ip_now ]
- then curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/$ZONA/dns_records/b44cd84b1b94727fb1c80d05117c0381" \
-     -H "X-Auth-Email: $milo" \
-     -H "X-Auth-Key: $KLUCH" \
-     -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"ddns.belomor.nl","content":"'$ip_add'","ttl":120,"proxied":true}' | jq .
-else echo $ip_add IS ACTIVE A RECORD!
-
-fi
-</code></pre>
-<hr><p>Crontab every 2 minutes:</p>
-<pre><code>root@gus:~# crontab -l | grep logg
-*/2 * * * * /root/cloud-dns.sh 2&gt;&amp;1 | logger
-</code></pre>
+                <p><code>code bin/bash</code></p>
 
 
             </section>
