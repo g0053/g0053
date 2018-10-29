@@ -1,2 +1,25 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Belomor</title><description>Cyber Engineering </description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Belomor</title><link>http://localhost:2368/</link></image><generator>Ghost 2.3</generator><lastBuildDate>Mon, 29 Oct 2018 13:05:07 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Test Story I</title><description>&lt;p&gt;inline code&lt;/p&gt;</description><link>http://localhost:2368/test-story-i/</link><guid isPermaLink="false">5bd6e4600dff3c2bb19d0bfd</guid><dc:creator>GUS</dc:creator><pubDate>Mon, 29 Oct 2018 10:44:33 GMT</pubDate><content:encoded>&lt;p&gt;inline code&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Belomor</title><description>Cyber Engineering </description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Belomor</title><link>http://localhost:2368/</link></image><generator>Ghost 2.3</generator><lastBuildDate>Mon, 29 Oct 2018 14:55:06 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>CloudFlare DDDNS</title><description>&lt;p&gt;Shell script makes API call if ip_add is not equal to ip_now:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;root@gus:~# cat /root/cloud-dns.sh 
+KLUCH='yr_api_key'
+ZONA='yr_zone'
+ip_now=$(dig @1.1.1.1 voip.belomor.nl | grep voip.belomor.nl | tail -1 | awk {'print $5'})
+ip_add=$(curl -4s&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/cloudflare-ddns/</link><guid isPermaLink="false">5bd6e4600dff3c2bb19d0bfd</guid><category>cloudflare</category><category>ddns</category><category>shell</category><category>crontab</category><dc:creator>GUS</dc:creator><pubDate>Mon, 29 Oct 2018 10:44:33 GMT</pubDate><media:content url="http://localhost:2368/content/images/2018/10/Cloudflare_Logo.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2018/10/Cloudflare_Logo.png" alt="CloudFlare DDDNS"&gt;&lt;p&gt;Shell script makes API call if ip_add is not equal to ip_now:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;root@gus:~# cat /root/cloud-dns.sh 
+KLUCH='yr_api_key'
+ZONA='yr_zone'
+ip_now=$(dig @1.1.1.1 voip.belomor.nl | grep voip.belomor.nl | tail -1 | awk {'print $5'})
+ip_add=$(curl -4s ipconfig.io)
+milo='1@belomor.nl'
+if [ $ip_add != $ip_now ]
+ then curl -s -X PUT &amp;quot;https://api.cloudflare.com/client/v4/zones/$ZONA/dns_records/b44cd84b1b94727fb1c80d05117c0381&amp;quot; \
+     -H &amp;quot;X-Auth-Email: $milo&amp;quot; \
+     -H &amp;quot;X-Auth-Key: $KLUCH&amp;quot; \
+     -H &amp;quot;Content-Type: application/json&amp;quot; \
+     --data '{&amp;quot;type&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;voip.belomor.nl&amp;quot;,&amp;quot;content&amp;quot;:&amp;quot;'$ip_add'&amp;quot;,&amp;quot;ttl&amp;quot;:120,&amp;quot;proxied&amp;quot;:false}' | jq .
+else echo $ip_add IS ACTIVE A RECORD!
+
+fi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;&lt;p&gt;Crontab every 2 minutes:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@gus:~# crontab -l | grep logg
+*/2 * * * * /root/cloud-dns.sh 2&amp;gt;&amp;amp;1 | logger
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item></channel></rss>
