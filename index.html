@@ -38,7 +38,12 @@
     "publisher": {
         "@type": "Organization",
         "name": "Belomor",
-        "logo": "https://casper.ghost.org/v1.0.0/images/ghost-logo.svg"
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.png",
+            "width": 60,
+            "height": 60
+        }
     },
     "url": "http://localhost:2368/",
     "image": {
@@ -75,7 +80,7 @@ ghost.init({
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
-                    <img class="site-logo" src="https://casper.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Belomor">
+                    Belomor
             </h1>
             <h2 class="site-description">Cyber Engineering </h2>
         </div>
@@ -85,7 +90,6 @@ ghost.init({
     <li class="nav-home nav-current" role="menuitem"><a href="index.html">Home</a></li>
     <li class="nav-tag" role="menuitem"><a href="tag/getting-started/">Tag</a></li>
     <li class="nav-author" role="menuitem"><a href="author/ghost/">Author</a></li>
-    <li class="nav-help" role="menuitem"><a href="https://help.ghost.org">Help</a></li>
 </ul>
 
     </div>

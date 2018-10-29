@@ -45,7 +45,12 @@
     "publisher": {
         "@type": "Organization",
         "name": "Belomor",
-        "logo": "https://casper.ghost.org/v1.0.0/images/ghost-logo.svg"
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.png",
+            "width": 60,
+            "height": 60
+        }
     },
     "author": {
         "@type": "Person",
@@ -87,12 +92,11 @@ ghost.init({
     <div class="inner">
         <nav class="site-nav">
     <div class="site-nav-left">
-                <a class="site-nav-logo" href="../"><img src="https://casper.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Belomor"></a>
+                <a class="site-nav-logo" href="../">Belomor</a>
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="../">Home</a></li>
     <li class="nav-tag" role="menuitem"><a href="../tag/getting-started/">Tag</a></li>
     <li class="nav-author" role="menuitem"><a href="../author/ghost/">Author</a></li>
-    <li class="nav-help" role="menuitem"><a href="https://help.ghost.org">Help</a></li>
 </ul>
 
     </div>
