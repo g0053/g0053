@@ -18,11 +18,11 @@
     <meta property="og:site_name" content="Belomor">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Ghost Buster Raspberry Pi 2">
-    <meta property="og:description" content="pi@homepi:~/gh $ pwd /home/pi/gh pi@homepi:~/gh $ ghost ls ┌─────────────┬──────────┬─────────┬───────────────────────┬───────────────────┬──────┬─────────────────┐ │ Name        │ Location │ Version │ Status                │ URL               │ Port │ Process Manager │ ├─────────────┼──────────┼─────────┼───────────────────────┼───────────────────┼──────┼─────────────────┤ │ ghost-local │ ~/gh     │ 2.3.0   │ running (development) │ http://belomor.nl │ 2368 │ local           │ └─────────────┴──────────┴─────────┴───────────────────────┴───────────────────┴──────┴─────────────────┘ pi@homepi:~/gh $ cat ./config.development.json {   &amp;quot;url&amp;quot;: &amp;quot;http://belomor.nl&amp;quot;,   &amp;quot;server&amp;quot;">
+    <meta property="og:description" content="Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,">
     <meta property="og:url" content="http://belomor.nl/ghost-buster-ras/">
     <meta property="og:image" content="http://belomor.nl/content/images/2019/02/ghostbusters.jpg">
     <meta property="article:published_time" content="2019-02-21T23:14:31.000Z">
-    <meta property="article:modified_time" content="2019-02-22T00:13:46.000Z">
+    <meta property="article:modified_time" content="2019-02-22T00:23:23.000Z">
     <meta property="article:tag" content="ghost">
     <meta property="article:tag" content="buster">
     <meta property="article:tag" content="git">
@@ -30,7 +30,7 @@
     <meta property="article:publisher" content="https://www.facebook.com/facebook">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ghost Buster Raspberry Pi 2">
-    <meta name="twitter:description" content="pi@homepi:~/gh $ pwd /home/pi/gh pi@homepi:~/gh $ ghost ls ┌─────────────┬──────────┬─────────┬───────────────────────┬───────────────────┬──────┬─────────────────┐ │ Name        │ Location │ Version │ Status                │ URL               │ Port │ Process Manager │ ├─────────────┼──────────┼─────────┼───────────────────────┼───────────────────┼──────┼─────────────────┤ │ ghost-local │ ~/gh     │ 2.3.0   │ running (development) │ http://belomor.nl │ 2368 │ local           │ └─────────────┴──────────┴─────────┴───────────────────────┴───────────────────┴──────┴─────────────────┘ pi@homepi:~/gh $ cat ./config.development.json {   &amp;quot;url&amp;quot;: &amp;quot;http://belomor.nl&amp;quot;,   &amp;quot;server&amp;quot;">
+    <meta name="twitter:description" content="Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,">
     <meta name="twitter:url" content="http://belomor.nl/ghost-buster-ras/">
     <meta name="twitter:image" content="http://belomor.nl/content/images/2019/02/ghostbusters.jpg">
     <meta name="twitter:label1" content="Written by">
@@ -64,7 +64,7 @@
     "headline": "Ghost Buster Raspberry Pi 2",
     "url": "http://belomor.nl/ghost-buster-ras/",
     "datePublished": "2019-02-21T23:14:31.000Z",
-    "dateModified": "2019-02-22T00:13:46.000Z",
+    "dateModified": "2019-02-22T00:23:23.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://belomor.nl/content/images/2019/02/ghostbusters.jpg",
@@ -72,7 +72,7 @@
         "height": 768
     },
     "keywords": "ghost, buster, git",
-    "description": "pi@homepi:~/gh $ pwd /home/pi/gh pi@homepi:~/gh $ ghost ls ┌─────────────┬──────────┬─────────┬───────────────────────┬───────────────────┬──────┬─────────────────┐ │ Name        │ Location │ Version │ Status                │ URL               │ Port │ Process Manager │ ├─────────────┼──────────┼─────────┼───────────────────────┼───────────────────┼──────┼─────────────────┤ │ ghost-local │ ~/gh     │ 2.3.0   │ running (development) │ http://belomor.nl │ 2368 │ local           │ └─────────────┴──────────┴─────────┴───────────────────────┴───────────────────┴──────┴─────────────────┘ pi@homepi:~/gh $ cat ./config.development.json {   &amp;quot;url&amp;quot;: &amp;quot;http://belomor.nl&amp;quot;,   &amp;quot;server&amp;quot;",
+    "description": "Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://belomor.nl/"
@@ -141,7 +141,13 @@ ghost.init({
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <hr><pre><code>pi@homepi:~/gh $ pwd
+                    <hr><h2 id="usingghostbusteronpi2forgithubblogpage">Using Ghost + Buster on PI2 for Github blog page.</h2>
+<h3 id="stopghost">stop ghost:</h3>
+<p><code>pi@homepi:~/gh $ ghost stop</code></p>
+<h3 id="startindevelopment">start in development:</h3>
+<p><code>pi@homepi:~/gh $ ghost strart -D</code></p>
+<h3 id="devmodeisusingsqlite3dbandformeitisenoughinsteadofprodisusingmysqlmariadbanduhavetocreatedbuserpassgrantpermissionsetc">dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,USER,PASS,GRANT PERMISSIONS, etc...</h3>
+<pre><code>pi@homepi:~/gh $ pwd
 /home/pi/gh
 pi@homepi:~/gh $ ghost ls
 ┌─────────────┬──────────┬─────────┬───────────────────────┬───────────────────┬──────┬─────────────────┐
