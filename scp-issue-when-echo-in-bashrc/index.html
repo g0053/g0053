@@ -22,7 +22,7 @@
     <meta property="og:url" content="http://belomor.nl/scp-issue-when-echo-in-bashrc/">
     <meta property="og:image" content="http://belomor.nl/content/images/2019/06/scp-between-linux-computers-featured.jpg">
     <meta property="article:published_time" content="2019-06-01T05:13:06.000Z">
-    <meta property="article:modified_time" content="2019-06-01T05:17:38.000Z">
+    <meta property="article:modified_time" content="2019-06-01T05:22:17.000Z">
     <meta property="article:tag" content="scp">
     <meta property="article:tag" content="echo">
     <meta property="article:tag" content="ssh">
@@ -65,7 +65,7 @@
     "headline": "SCP issue when echo in .bashrc?",
     "url": "http://belomor.nl/scp-issue-when-echo-in-bashrc/",
     "datePublished": "2019-06-01T05:13:06.000Z",
-    "dateModified": "2019-06-01T05:17:38.000Z",
+    "dateModified": "2019-06-01T05:22:17.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://belomor.nl/content/images/2019/06/scp-between-linux-computers-featured.jpg",
@@ -147,7 +147,7 @@ ghost.init({
 echo "$(tput setaf 1)Current WAN IP is: $(tput setab 7)$ip_add$(tput sgr 0)"
 </code></pre>
 <p><strong>Using echo in a .bashrc will break scp, as scp expects to see its protocol data over the stdin/stdout channels...</strong></p>
-<p><strong>While copy from remote remote-server to local you wil get such output</strong></p>
+<p><strong>While copy from remote remote-server to local you will get such output</strong></p>
 <pre><code>[root@homepi:/etc/telegraf]# scp remote-server:/etc/telegraf/telegraf.conf ./
 tput: No value for $TERM and no -T specified
 tput: No value for $TERM and no -T specified
