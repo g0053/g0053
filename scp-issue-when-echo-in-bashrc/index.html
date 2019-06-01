@@ -4,42 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Ghost Buster Raspberry Pi 2</title>
+    <title>SCP issue when echo in .bashrc?</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=05c434b66a">
 
     <link rel="shortcut icon" href="../favicon.png" type="image/png">
-    <link rel="canonical" href="http://belomor.nl/ghost-buster-ras/">
+    <link rel="canonical" href="http://belomor.nl/scp-issue-when-echo-in-bashrc/">
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="amphtml" href="http://belomor.nl/ghost-buster-ras/amp/">
+    <link rel="amphtml" href="http://belomor.nl/scp-issue-when-echo-in-bashrc/amp/">
     
     <meta property="og:site_name" content="">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Ghost Buster Raspberry Pi 2">
-    <meta property="og:description" content="Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,">
-    <meta property="og:url" content="http://belomor.nl/ghost-buster-ras/">
-    <meta property="og:image" content="http://belomor.nl/content/images/2019/02/ghostbusters.jpg">
-    <meta property="article:published_time" content="2019-02-21T23:14:31.000Z">
-    <meta property="article:modified_time" content="2019-02-22T00:34:29.000Z">
-    <meta property="article:tag" content="ghost">
-    <meta property="article:tag" content="buster">
-    <meta property="article:tag" content="git">
+    <meta property="og:title" content="SCP issue when echo in .bashrc?">
+    <meta property="og:description" content="I use such script to view WAN IP on ssh login in the end of /etc/bashrc: ip_add=$(curl -4s ipconfig.io) echo &amp;quot;$(tput setaf 1)Current WAN IP is: $(tput setab 7)$ip_add$(tput sgr 0)&amp;quot; Using echo in a .bashrc will break scp, as">
+    <meta property="og:url" content="http://belomor.nl/scp-issue-when-echo-in-bashrc/">
+    <meta property="og:image" content="http://belomor.nl/content/images/2019/06/scp-between-linux-computers-featured.jpg">
+    <meta property="article:published_time" content="2019-06-01T05:13:06.000Z">
+    <meta property="article:modified_time" content="2019-06-01T05:17:38.000Z">
+    <meta property="article:tag" content="scp">
+    <meta property="article:tag" content="echo">
+    <meta property="article:tag" content="ssh">
+    <meta property="article:tag" content="error">
     
     <meta property="article:publisher" content="https://www.facebook.com/facebook">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ghost Buster Raspberry Pi 2">
-    <meta name="twitter:description" content="Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,">
-    <meta name="twitter:url" content="http://belomor.nl/ghost-buster-ras/">
-    <meta name="twitter:image" content="http://belomor.nl/content/images/2019/02/ghostbusters.jpg">
+    <meta name="twitter:title" content="SCP issue when echo in .bashrc?">
+    <meta name="twitter:description" content="I use such script to view WAN IP on ssh login in the end of /etc/bashrc: ip_add=$(curl -4s ipconfig.io) echo &amp;quot;$(tput setaf 1)Current WAN IP is: $(tput setab 7)$ip_add$(tput sgr 0)&amp;quot; Using echo in a .bashrc will break scp, as">
+    <meta name="twitter:url" content="http://belomor.nl/scp-issue-when-echo-in-bashrc/">
+    <meta name="twitter:image" content="http://belomor.nl/content/images/2019/06/scp-between-linux-computers-featured.jpg">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="GUS">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="ghost, buster, git">
+    <meta name="twitter:data2" content="scp, echo, ssh, error">
     <meta name="twitter:site" content="@twitter.com">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="768">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="343">
     
     <script type="application/ld+json">
 {
@@ -61,18 +62,18 @@
         "url": "http://belomor.nl/author/gus/",
         "sameAs": []
     },
-    "headline": "Ghost Buster Raspberry Pi 2",
-    "url": "http://belomor.nl/ghost-buster-ras/",
-    "datePublished": "2019-02-21T23:14:31.000Z",
-    "dateModified": "2019-02-22T00:34:29.000Z",
+    "headline": "SCP issue when echo in .bashrc?",
+    "url": "http://belomor.nl/scp-issue-when-echo-in-bashrc/",
+    "datePublished": "2019-06-01T05:13:06.000Z",
+    "dateModified": "2019-06-01T05:17:38.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://belomor.nl/content/images/2019/02/ghostbusters.jpg",
-        "width": 1024,
-        "height": 768
+        "url": "http://belomor.nl/content/images/2019/06/scp-between-linux-computers-featured.jpg",
+        "width": 800,
+        "height": 343
     },
-    "keywords": "ghost, buster, git",
-    "description": "Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,",
+    "keywords": "scp, echo, ssh, error",
+    "description": "I use such script to view WAN IP on ssh login in the end of /etc/bashrc: ip_add&#x3D;$(curl -4s ipconfig.io) echo &amp;quot;$(tput setaf 1)Current WAN IP is: $(tput setab 7)$ip_add$(tput sgr 0)&amp;quot; Using echo in a .bashrc will break scp, as",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://belomor.nl/"
@@ -91,7 +92,7 @@ ghost.init({
     <link rel="alternate" type="application/rss+xml" title="" href="http://belomor.nl/rss/">
 
 </head>
-<body class="post-template tag-ghost-tag tag-buster tag-git">
+<body class="post-template tag-scp tag-echo tag-ssh tag-error">
 
     <div class="site-wrapper">
 
@@ -126,97 +127,50 @@ ghost.init({
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full post tag-ghost-tag tag-buster tag-git ">
+        <article class="post-full post tag-scp tag-echo tag-ssh tag-error ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="2019-02-22">22 February 2019</time>
-                        <span class="date-divider">/</span> <a href="../tag/ghost-tag/">ghost</a>
+                    <time class="post-full-meta-date" datetime="2019-06-01">1 June 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/scp/">scp</a>
                 </section>
-                <h1 class="post-full-title">Ghost Buster Raspberry Pi 2</h1>
+                <h1 class="post-full-title">SCP issue when echo in .bashrc?</h1>
             </header>
 
-            <figure class="post-full-image" style="background-image: url(../content/images/2019/02/ghostbusters.jpg)">
+            <figure class="post-full-image" style="background-image: url(../content/images/2019/06/scp-between-linux-computers-featured.jpg)">
             </figure>
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <hr><h2 id="usingghostbusteronpi2forgithubblogpage">Using Ghost + Buster on PI2 for Github blog page.</h2>
-<h3 id="stopghost">stop ghost:</h3>
-<p><code>pi@homepi:~/gh $ ghost stop</code></p>
-<h3 id="startindevelopment">start in development:</h3>
-<p><code>pi@homepi:~/gh $ ghost strart -D</code></p>
-<h3 id="devmodeisusingsqlite3dbandformeitisenoughinsteadofprodisusingmysqlmariadbanduhavetocreatedbuserpassgrantpermissionsetc">dev mode is using sqlite3 DB and for me it is enough, instead of prod is using Mysql/MariaDB and u have to create DB,USER,PASS,GRANT PERMISSIONS, etc...</h3>
-<pre><code>pi@homepi:~/gh $ pwd
-/home/pi/gh
-pi@homepi:~/gh $ ghost ls
-┌─────────────┬──────────┬─────────┬───────────────────────┬───────────────────┬──────┬─────────────────┐
-│ Name        │ Location │ Version │ Status                │ URL               │ Port │ Process Manager │
-├─────────────┼──────────┼─────────┼───────────────────────┼───────────────────┼──────┼─────────────────┤
-│ ghost-local │ ~/gh     │ 2.3.0   │ running (development) │ http://belomor.nl │ 2368 │ local           │
-└─────────────┴──────────┴─────────┴───────────────────────┴───────────────────┴──────┴─────────────────┘
-pi@homepi:~/gh $ cat ./config.development.json
-{
-  "url": "http://belomor.nl",
-  "server": {
-    "port": 2368,
-    "host": "127.0.0.1"
-  },
-  "database": {
-    "client": "sqlite3",
-    "connection": {
-      "filename": "/home/pi/gh/content/data/ghost-local.db"
-    }
-  },
-  "mail": {
-    "transport": "Direct"
-  },
-  "logging": {
-    "transports": [
-      "file",
-      "stdout"
-    ]
-  },
-  "process": "local",
-  "paths": {
-    "contentPath": "/home/pi/gh/content"
-  }
-}
-
-
-
+                    <p><strong>I use such script to view WAN IP on ssh login in the end of /etc/bashrc:</strong></p>
+<pre><code>ip_add=$(curl -4s ipconfig.io)
+echo "$(tput setaf 1)Current WAN IP is: $(tput setab 7)$ip_add$(tput sgr 0)"
+</code></pre>
+<p><strong>Using echo in a .bashrc will break scp, as scp expects to see its protocol data over the stdin/stdout channels...</strong></p>
+<p><strong>While copy from remote remote-server to local you wil get such output</strong></p>
+<pre><code>[root@homepi:/etc/telegraf]# scp remote-server:/etc/telegraf/telegraf.conf ./
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+protocol error: bad mode
 
 </code></pre>
-<h3 id="usesshlocalporttunnelfroml1270012368torremoteip2368then">Use ssh local port tunnel from L 127.0.0.1 2368 to R remote-ip 2368, then:</h3>
-<p><a href="http://">http://localhost:2368/ghost</a></p>
-<h3 id="createstorypublishyoucanreviewonhomepage">Create story ,publish. you can review on home page:</h3>
-<p><a href="http://">http://localhost:2368</a></p>
-<h3 id="oryoucanusebustertoreviewaswellondefaulttcpport9000butbeforerun">or you can use <strong>buster</strong> to review as well on default TCP port 9000, but before run:</h3>
-<p><code>pi@homepi:~/gh $ buster generate</code></p>
-<p><code>pi@homepi:~/gh $ buster preview</code></p>
-<p><a href="http://">http://192.168.168.48:9000/</a></p>
-<p><code>pi@homepi:~/gh $ buster deploy</code></p>
-<p><code>Username for 'https://github.com': g0053 Password for 'https://g0053@github.com':</code><br>
-<strong>Good job! Deployed to Github Pages.</strong></p>
-<pre><code>  .',;:cc;,'.    .,;::c:,,.                                                                                                                                                                         
- ,ooolcloooo:  'oooooccloo:    -------------------- 
- .looooc;;:ol  :oc;;:ooooo'    OS: Raspbian GNU/Linux 9.6 (stretch) armv7l 
-   ;oooooo:      ,ooooooc.     Model: Raspberry Pi 2 Model B Rev 1.1 
-     .,:;'.       .;:;'.       Kernel: 4.14.79-v7+ 
-     .... ..'''''. ....        Uptime: 1 hour, 44 minutes 
-   .''.   ..'''''.  ..''.      Packages: 1218 
-   ..  .....    .....  ..      Shell: bash 4.4.12 
-  .  .'''''''  .''''''.  .     CPU: ARMv7 rev 5 (v7l) (4) @ 0.9GHz 
-.'' .''''''''  .'''''''. ''.   Memory: 379MB / 927MB 
-'''  '''''''    .''''''  '''   ​ 
-.'    ........... ...    .'.   ████████████████████████ 
-  ....    ''''''''.   .''.     ​ 
-  '''''.  ''''''''. .''''' 
-   '''''.  .'''''. .'''''. 
-    ..''.     .    .''.. 
-          .''''''' 
-           ...... 
+<p><strong>At remote edit /root/.bashrc at remote-server:</strong></p>
+<pre><code>####GUS ADDED FROM SCP DOES NOT WORK IF 'ECHO' USED?
+
+if [ -z "$PS1" ]; then
+    return
+fi
+
+###END GUS
+
 </code></pre>
+<p><strong>Try again:</strong></p>
+<pre><code>[root@homepi:/etc/telegraf]# scp 192.168.100.126:/etc/telegraf/telegraf.conf ./
+telegraf.conf                                                                                                                                                                                  100%  183KB 159.2KB/s   00:01    
+[root@homepi:/etc/telegraf]# 
+</code></pre>
+<h2 id="fixed">Fixed</h2>
 
                 </div>
             </section>
@@ -278,52 +232,19 @@ pi@homepi:~/gh $ cat ./config.development.json
     <div class="inner">
         <div class="read-next-feed">
 
-                <article class="post-card post tag-scp tag-echo tag-ssh tag-error">
-        <a class="post-card-image-link" href="../scp-issue-when-echo-in-bashrc/">
-            <div class="post-card-image" style="background-image: url(../content/images/2019/06/scp-between-linux-computers-featured.jpg)"></div>
+
+                <article class="post-card post tag-ghost-tag tag-buster tag-git">
+        <a class="post-card-image-link" href="../ghost-buster-ras/">
+            <div class="post-card-image" style="background-image: url(../content/images/2019/02/ghostbusters.jpg)"></div>
         </a>
     <div class="post-card-content">
-        <a class="post-card-content-link" href="../scp-issue-when-echo-in-bashrc/">
+        <a class="post-card-content-link" href="../ghost-buster-ras/">
             <header class="post-card-header">
-                    <span class="post-card-tags">scp</span>
-                <h2 class="post-card-title">SCP issue when echo in .bashrc?</h2>
+                    <span class="post-card-tags">ghost</span>
+                <h2 class="post-card-title">Ghost Buster Raspberry Pi 2</h2>
             </header>
             <section class="post-card-excerpt">
-                <p>I use such script to view WAN IP on ssh login in the end of /etc/bashrc: ip_add=$(curl -4s ipconfig.io) echo "$(tput setaf 1)Current WAN IP is: $(tput</p>
-            </section>
-        </a>
-        <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        GUS
-                    </div>
-
-                        <a href="../author/gus/" class="static-avatar author-profile-image"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"></path></g></svg>
-</a>
-                </li>
-            </ul>
-
-            <span class="reading-time">1 min read</span>
-
-        </footer>
-    </div>
-</article>
-
-                <article class="post-card post tag-bash tag-shell tag-cloudflare tag-ddns">
-        <a class="post-card-image-link" href="../cloudflare-homemade-ddns/">
-            <div class="post-card-image" style="background-image: url(../content/images/2019/05/cloudflare-logo-v-rgb-1.jpeg)"></div>
-        </a>
-    <div class="post-card-content">
-        <a class="post-card-content-link" href="../cloudflare-homemade-ddns/">
-            <header class="post-card-header">
-                    <span class="post-card-tags">bash</span>
-                <h2 class="post-card-title">Cloudflare HomeMade DDNS</h2>
-            </header>
-            <section class="post-card-excerpt">
-                <p>ttl='120' cron runs every $ttl sec :) root@kali:~# crontab -l| grep logger */2 * * * * /root/cloud-dns.sh 2&gt;&amp;1 | logger root@kali:~# cat ./cloud-dns.sh KLUCH='e0f709af7a3ebfd73a14f6d71782eb96' ZONA='fc9fd399ac93ef301abfe1f14cd75d1e0' milo='gus@</p>
+                <p>Using Ghost + Buster on PI2 for Github blog page. stop ghost: pi@homepi:~/gh $ ghost stop start in development: pi@homepi:~/gh $ ghost strart -D dev mode is using sqlite3 DB and for</p>
             </section>
         </a>
         <footer class="post-card-meta">
@@ -358,16 +279,16 @@ pi@homepi:~/gh $ cat ./config.development.json
         </a>
     </div>
     <span class="floating-header-divider">—</span>
-    <div class="floating-header-title">Ghost Buster Raspberry Pi 2</div>
+    <div class="floating-header-title">SCP issue when echo in .bashrc?</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Ghost%20Buster%20Raspberry%20Pi%202&amp;url=http://belomor.nl/ghost-buster-ras/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=SCP%20issue%20when%20echo%20in%20.bashrc%3F&amp;url=http://belomor.nl/scp-issue-when-echo-in-bashrc/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://belomor.nl/ghost-buster-ras/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://belomor.nl/scp-issue-when-echo-in-bashrc/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
         </a>
     </div>
@@ -387,7 +308,7 @@ pi@homepi:~/gh $ cat ./config.development.json
 /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "ghost-5c6f2f93b76e5a0b9d6d7f38"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.identifier = "ghost-5cf205e5ed500374d357c387"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 */
 (function() { // DON'T EDIT BELOW THIS LINE
